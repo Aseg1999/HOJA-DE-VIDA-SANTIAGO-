@@ -1,237 +1,1074 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hoja de Vida Angel Gomez</title>
 
-<!-- Bootstrap -->
+<title>Ángel Santiago Estupiñan Gómez | Ingeniería de Sistemas</title>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Iconos -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#efefef;
-display:flex;
+    background:#f4f7fb;
+    color:#1f2937;
 }
 
+/* =========================
+   SIDEBAR
+========================= */
+
 .sidebar{
-width:260px;
-height:100vh;
-background:#1e3a8a;
-color:white;
-position:fixed;
-left:0;
-top:0;
-padding:30px 20px;
-text-align:center;
+    position:fixed;
+    left:0;
+    top:0;
+    width:270px;
+    height:100vh;
+    background:#102a56;
+    color:white;
+    padding:35px 22px;
+    text-align:center;
+    z-index:1000;
 }
 
 .sidebar img{
-width:140px;
-height:140px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid white;
-margin-bottom:20px;
-display:block;
-margin-left:auto;
-margin-right:auto;
+    width:145px;
+    height:145px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid white;
+    margin-bottom:18px;
 }
 
 .sidebar h2{
-font-size:20px;
-margin-bottom:30px;
+    font-size:21px;
+    margin-bottom:5px;
 }
 
-.sidebar a{
-display:block;
-color:white;
-text-decoration:none;
-font-weight:bold;
-margin:18px 0;
-font-size:16px;
+.sidebar .cargo{
+    color:#b9c9e6;
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:30px;
 }
 
-.sidebar a:hover{
-text-decoration:underline;
+.sidebar nav a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    text-align:left;
+    padding:11px 15px;
+    margin:5px 0;
+    border-radius:8px;
+    font-size:14px;
+    transition:.3s;
 }
+
+.sidebar nav a i{
+    width:25px;
+}
+
+.sidebar nav a:hover{
+    background:#1d4ed8;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
 
 .content{
-margin-left:260px;
-padding:60px;
-width:calc(100% - 260px);
+    margin-left:270px;
+    padding:55px;
+    max-width:1500px;
 }
 
-.header{
-margin-bottom:30px;
+/* =========================
+   PRESENTACIÓN
+========================= */
+
+.hero{
+    background:white;
+    padding:45px;
+    border-radius:18px;
+    margin-bottom:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
 }
 
-.header h1{
-font-size:55px;
-color:#111;
-margin-bottom:10px;
+.hero h1{
+    font-size:48px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:8px;
 }
 
-.header p{
-font-size:18px;
-color:#666;
+.hero h3{
+    font-size:21px;
+    color:#1d4ed8;
+    margin-bottom:12px;
 }
+
+.hero p{
+    color:#6b7280;
+    font-size:17px;
+}
+
+.btn-cv{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    margin-top:20px;
+    padding:12px 20px;
+    background:#1d4ed8;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-cv:hover{
+    background:#163da8;
+    color:white;
+    transform:translateY(-2px);
+}
+
+/* =========================
+   SECCIONES
+========================= */
 
 .section{
-background:white;
-padding:30px;
-margin-bottom:25px;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    background:white;
+    padding:32px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 6px 20px rgba(0,0,0,.05);
 }
 
-.section h2{
-font-size:22px;
-margin-bottom:18px;
-color:#111;
+.section-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:23px;
+    color:#102a56;
+    margin-bottom:23px;
+    padding-bottom:12px;
+    border-bottom:2px solid #e5e7eb;
 }
 
-.section p, .section li{
-font-size:17px;
-line-height:1.6;
-color:#222;
+.section-title i{
+    color:#1d4ed8;
 }
 
-ul{
-padding-left:20px;
+/* =========================
+   PERFIL
+========================= */
+
+.profile-text{
+    font-size:16px;
+    line-height:1.8;
+    color:#4b5563;
 }
 
-.redes a{
-display:inline-block;
-margin-right:15px;
-text-decoration:none;
-font-weight:bold;
+/* =========================
+   EDUCACIÓN / EXPERIENCIA
+========================= */
+
+.timeline{
+    border-left:3px solid #dbeafe;
+    padding-left:25px;
 }
 
-.redes .github{
-color:#171515;
+.timeline-item{
+    position:relative;
+    margin-bottom:25px;
 }
 
-.redes .facebook{
-color:#1877f2;
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    width:12px;
+    height:12px;
+    background:#1d4ed8;
+    border-radius:50%;
+    left:-32px;
+    top:6px;
 }
 
-.redes .whatsapp{
-color:#25d366;
+.timeline-item h3{
+    font-size:18px;
+    color:#111827;
+    margin-bottom:5px;
 }
 
-@media(max-width:900px){
-body{
-display:block;
+.timeline-item .company{
+    color:#1d4ed8;
+    font-weight:bold;
+    margin-bottom:4px;
 }
 
-.sidebar{
-position:relative;
-width:100%;
-height:auto;
+.timeline-item .date{
+    color:#6b7280;
+    font-size:14px;
+    margin-bottom:10px;
 }
 
-.content{
-margin-left:0;
-width:100%;
-padding:30px 20px;
+.timeline-item p,
+.timeline-item li{
+    color:#4b5563;
+    line-height:1.6;
+    font-size:15px;
 }
 
-.header h1{
-font-size:38px;
+/* =========================
+   TECNOLOGÍAS
+========================= */
+
+.tech-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
 }
+
+.tech{
+    padding:18px;
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    border-radius:10px;
+    text-align:center;
+    transition:.3s;
 }
+
+.tech:hover{
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(0,0,0,.07);
+}
+
+.tech i{
+    font-size:25px;
+    color:#1d4ed8;
+    margin-bottom:8px;
+}
+
+.tech h4{
+    font-size:15px;
+    margin:0;
+    color:#111827;
+}
+
+.tech span{
+    display:block;
+    margin-top:5px;
+    font-size:12px;
+    color:#6b7280;
+}
+
+/* =========================
+   HABILIDADES
+========================= */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill{
+    background:#eff6ff;
+    color:#1e40af;
+    padding:9px 15px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* =========================
+   PROYECTOS
+========================= */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.project{
+    padding:22px;
+    background:#f8fafc;
+    border-radius:10px;
+    border:1px solid #e5e7eb;
+    transition:.3s;
+}
+
+.project:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 18px rgba(0,0,0,.07);
+}
+
+.project i{
+    color:#1d4ed8;
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.project h3{
+    font-size:18px;
+    margin-bottom:8px;
+    color:#111827;
+}
+
+.project p{
+    color:#6b7280;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.contact{
+    padding:18px;
+    background:#f8fafc;
+    border-radius:10px;
+    text-align:center;
+}
+
+.contact i{
+    color:#1d4ed8;
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.contact p{
+    margin:0;
+    font-size:14px;
+    color:#4b5563;
+    word-break:break-word;
+}
+
+.social{
+    margin-top:25px;
+}
+
+.social a{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    text-decoration:none;
+    margin-right:15px;
+    font-weight:bold;
+}
+
+.github{
+    color:#171515;
+}
+
+.facebook{
+    color:#1877f2;
+}
+
+.whatsapp{
+    color:#25d366;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    text-align:center;
+    color:#9ca3af;
+    font-size:13px;
+    padding:15px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+    }
+
+    .sidebar nav a{
+        display:inline-block;
+        width:auto;
+    }
+
+    .content{
+        margin-left:0;
+        padding:25px;
+    }
+
+    .tech-grid,
+    .projects,
+    .contact-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:650px){
+
+    .hero{
+        padding:28px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero h3{
+        font-size:18px;
+    }
+
+    .section{
+        padding:23px;
+    }
+
+    .tech-grid,
+    .projects,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="sidebar">
-<img src="foto.jpg.jpg" alt="Foto de Santiago">
 
-<h2>Angel Santiago</h2>
+<!-- =========================
+     SIDEBAR
+========================= -->
 
-<a href="#datos">Datos basicos</a>
-<a href="#sobre">Sobre mi</a>
-<a href="#educacion">Educacion</a>
-<a href="#habilidades">Habilidades</a>
-<a href="#proyectos">Proyectos</a>
-<a href="#contacto">Contacto</a>
-</div>
+<aside class="sidebar">
 
-<div class="content">
+    <img src="foto.jpg.jpg"
+         alt="Foto de Ángel Santiago Estupiñan Gómez">
 
-<div class="header" id="datos">
-<h1>Ángel Santiago Estupiñan Gómez</h1>
-<p>Estudiante de Ingeniería de Sistemas - Universidad del Pacífico</p>
-<p>Buenaventura Colombia</p>
-</div>
+    <h2>Ángel Santiago</h2>
 
-<div class="section" id="sobre">
-<h2>Sobre mi</h2>
-<p>
-Persona dinámica y comprometida con experiencia en atención al público,
-manejo de bodega y ventas. Poseo excelentes habilidades interpersonales,
-capacidad de trabajar bajo presión y orientación al cumplimiento de metas.
-Busco integrarme a un equipo donde pueda contribuir con mi dedicacion
-y experiencia profesional.
-</p>
-</div>
+    <p class="cargo">
+        Estudiante de Ingeniería de Sistemas<br>
+        Noveno semestre
+    </p>
 
-<div class="section" id="educacion">
-<h2>Educacion</h2>
-<p><strong>Universidad:</strong> Universidad del Pacifico</p>
-<p><strong>Carrera:</strong> Ingenieria de Sistemas</p>
-<p><strong>Periodo:</strong> 2022 - 2026</p>
-</div>
+    <nav>
 
-<div class="section" id="habilidades">
-<h2>Habilidades</h2>
-<ul>
-<li>Excel</li>
-<li>Python</li>
-<li>Analisis de datos</li>
-<li>Trabajo en equipo</li>
-<li>Presentaciones</li>
-</ul>
-</div>
+        <a href="#perfil">
+            <i class="fa-solid fa-user"></i>
+            Perfil
+        </a>
 
-<div class="section" id="proyectos">
-<h2>Proyectos</h2>
-<ul>
-<li>Presentación sobre algoritmos</li>
-<li>Proyecto de inventarios</li>
-<li>Trabajo de seguridad informática</li>
-</ul>
-</div>
+        <a href="#educacion">
+            <i class="fa-solid fa-graduation-cap"></i>
+            Educación
+        </a>
 
-<div class="section" id="contacto">
-<h2>Contacto</h2>
-<p><strong>Correo:</strong> santieg402@gmail.com</p>
-<p><strong>Telefono:</strong> 3150524957</p>
-<p><strong>Ciudad:</strong> Buenaventura Colombia</p>
+        <a href="#experiencia">
+            <i class="fa-solid fa-briefcase"></i>
+            Experiencia
+        </a>
 
-<div class="redes" style="margin-top:15px;">
-<a href="https://github.com/Aseg1999" target="_blank" class="github"><i class="fa-brands fa-github"></i> Github</a>
-<a href="https://www.facebook.com/share/1CoW8MKyZt/?mibextid=wwXIfr" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i> Facebook</a>
-<a href="https://wa.me/573150524957" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-</div>
+        <a href="#tecnologias">
+            <i class="fa-solid fa-code"></i>
+            Tecnologías
+        </a>
 
-</div>
+        <a href="#habilidades">
+            <i class="fa-solid fa-star"></i>
+            Habilidades
+        </a>
 
-</div>
+        <a href="#proyectos">
+            <i class="fa-solid fa-folder-open"></i>
+            Proyectos
+        </a>
+
+        <a href="#contacto">
+            <i class="fa-solid fa-envelope"></i>
+            Contacto
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- =========================
+     CONTENIDO
+========================= -->
+
+<main class="content">
+
+
+<!-- PRESENTACIÓN -->
+
+<section class="hero">
+
+    <h1>
+        Ángel Santiago<br>
+        Estupiñan Gómez
+    </h1>
+
+    <h3>
+        Estudiante de Ingeniería de Sistemas
+    </h3>
+
+    <p>
+        Noveno semestre · Próximo a culminar mi formación profesional
+    </p>
+
+    <p>
+        Buenaventura, Valle del Cauca, Colombia
+    </p>
+
+    <a href="Hoja_de_Vida_Angel_Santiago_Estupinan_Gomez.pdf"
+       download
+       class="btn-cv">
+
+        <i class="fa-solid fa-download"></i>
+
+        Descargar hoja de vida
+
+    </a>
+
+</section>
+
+
+<!-- PERFIL -->
+
+<section class="section" id="perfil">
+
+    <h2 class="section-title">
+
+        <i class="fa-solid fa-user"></i>
+
+        Perfil profesional
+
+    </h2>
+
+    <p class="profile-text">
+
+        Estudiante de noveno semestre de Ingeniería de Sistemas
+        en la Universidad del Pacífico, próximo a culminar mi
+        formación profesional. Cuento con conocimientos en
+        programación, desarrollo web, bases de datos, análisis
+        y visualización de datos y diferentes herramientas
+        tecnológicas.
+
+        <br><br>
+
+        También cuento con experiencia laboral en la administración
+        y operación de un negocio de comidas rápidas, realizando
+        actividades relacionadas con inventarios, bodega,
+        organización de productos y apoyo administrativo.
+
+        <br><br>
+
+        Me caracterizo por mi responsabilidad, capacidad de
+        aprendizaje, organización, trabajo en equipo y disposición
+        para asumir nuevos retos profesionales.
+
+    </p>
+
+</section>
+
+
+<!-- EDUCACIÓN -->
+
+<section class="section" id="educacion">
+
+    <h2 class="section-title">
+
+        <i class="fa-solid fa-graduation-cap"></i>
+
+        Educación
+
+    </h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <h3>
+                Ingeniería de Sistemas
+            </h3>
+
+            <p class="company">
+                Universidad del Pacífico
+            </p>
+
+            <p class="date">
+                2022 - 2026 · Noveno semestre
+            </p>
+
+            <p>
+                Formación en programación, bases de datos,
+                desarrollo de software, redes, análisis de datos,
+                arquitectura de sistemas y tecnologías de la
+                información.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCIA -->
+
+<section class="section" id="experiencia">
+
+    <h2 class="section-title">
+
+        <i class="fa-solid fa-briefcase"></i>
+
+        Experiencia laboral
+
+    </h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <h3>
+                Auxiliar de bodega y apoyo administrativo
+            </h3>
+
+            <p class="company">
+                Terranova Comidas Rápidas
+            </p>
+
+            <p class="date">
+                Buenaventura, Valle del Cauca
+            </p>
+
+            <ul>
+
+                <li>
+                    Manejo y control de inventarios.
+                </li>
+
+                <li>
+                    Recepción, organización y almacenamiento
+                    de productos e insumos.
+                </li>
+
+                <li>
+                    Verificación de existencias y seguimiento
+                    de productos disponibles.
+                </li>
+
+                <li>
+                    Apoyo en la administración y operación
+                    diaria del establecimiento.
+                </li>
+
+                <li>
+                    Organización de pedidos e insumos necesarios
+                    para la operación.
+                </li>
+
+                <li>
+                    Apoyo en atención al cliente y servicio.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TECNOLOGÍAS -->
+
+<section class="section" id="tecnologias">
+
+    <h2 class="section-title">
+
+        <i class="fa-solid fa-laptop-code"></i>
+
+        Lenguajes y tecnologías
+
+    </h2>
+
+
+    <div class="tech-grid">
+
+
+        <div class="tech">
+
+            <i class="fa-brands fa-python"></i>
+
+            <h4>Python</h4>
+
+            <span>Conocimientos prácticos</span>
+
+        </div>
+
+
+        <div class="tech">
+
+            <i class="fa-brands fa-java"></i>
+
+            <h4>Java</h4>
+
+            <span>Conocimientos académicos</span>
+
+        </div>
+
+
+        <div class="tech">
+
+            <i class="fa-brands fa-js"></i>
+
+            <h4>JavaScript</h4>
+
+            <span>Conocimientos prácticos</span>
+
+        </div>
+
+
+        <div class="tech">
+
+            <i class="fa-brands fa-html5"></i>
+
+            <h4>HTML5</h4>
+
+            <span>Desarrollo web</span>
+
+        </div>
+
+
+        <div class="tech">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+            <h4>CSS3</h4>
+
+            <span>Diseño web</span>
+
+        </div>
+
+
+        <div class="tech">
+
+            <i class="fa-solid fa-database"></i>
+
+            <h4>SQL / MySQL</h4>
+
+            <span>Bases de datos</span>
+
+        </div>
+
+
+        <div class="tech">
+
+            <i class="fa-brands fa-github"></i>
+
+            <h4>Git / GitHub</h4>
+
+            <span>Control de versiones</span>
+
+        </div>
+
+
+        <div class="tech">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <h4>Análisis de datos</h4>
+
+            <span>Análisis y visualización</span>
+
+        </div>
+
+
+        <div class="tech">
+
+            <i class="fa-solid fa-microchip"></i>
+
+            <h4>Arduino</h4>
+
+            <span>Electrónica y programación</span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- HABILIDADES -->
+
+<section class="section" id="habilidades">
+
+    <h2 class="section-title">
+
+        <i class="fa-solid fa-star"></i>
+
+        Habilidades
+
+    </h2>
+
+    <div class="skills">
+
+        <span class="skill">
+            Trabajo en equipo
+        </span>
+
+        <span class="skill">
+            Comunicación
+        </span>
+
+        <span class="skill">
+            Aprendizaje continuo
+        </span>
+
+        <span class="skill">
+            Responsabilidad
+        </span>
+
+        <span class="skill">
+            Organización
+        </span>
+
+        <span class="skill">
+            Atención al cliente
+        </span>
+
+        <span class="skill">
+            Manejo de inventarios
+        </span>
+
+        <span class="skill">
+            Resolución de problemas
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- PROYECTOS -->
+
+<section class="section" id="proyectos">
+
+    <h2 class="section-title">
+
+        <i class="fa-solid fa-folder-open"></i>
+
+        Proyectos destacados
+
+    </h2>
+
+
+    <div class="projects">
+
+
+        <div class="project">
+
+            <i class="fa-solid fa-microchip"></i>
+
+            <h3>
+                Proyecto con Arduino
+            </h3>
+
+            <p>
+                Desarrollo de un sistema utilizando Arduino,
+                sensores, motores, LCD y teclado matricial,
+                aplicando programación de microcontroladores.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>
+                Análisis y visualización de datos
+            </h3>
+
+            <p>
+                Procesamiento, análisis y visualización de
+                información utilizando herramientas de análisis
+                de datos.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <i class="fa-solid fa-globe"></i>
+
+            <h3>
+                Desarrollo web
+            </h3>
+
+            <p>
+                Creación de páginas web utilizando HTML,
+                CSS, JavaScript y Bootstrap, aplicando
+                diseño responsive.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <i class="fa-solid fa-database"></i>
+
+            <h3>
+                Bases de datos
+            </h3>
+
+            <p>
+                Diseño y manejo de bases de datos relacionales,
+                consultas SQL y organización de información
+                para proyectos académicos.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section class="section" id="contacto">
+
+    <h2 class="section-title">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        Contacto
+
+    </h2>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <p>
+                santieg402@gmail.com
+            </p>
+
+        </div>
+
+
+        <div class="contact">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <p>
+                315 052 4957
+            </p>
+
+        </div>
+
+
+        <div class="contact">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <p>
+                Buenaventura, Colombia
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="social">
+
+        <a href="https://github.com/Aseg1999"
+           target="_blank"
+           class="github">
+
+            <i class="fa-brands fa-github"></i>
+
+            GitHub
+
+        </a>
+
+
+        <a href="https://www.facebook.com/share/1CoW8MKyZt/?mibextid=wwXIfr"
+           target="_blank"
+           class="facebook">
+
+            <i class="fa-brands fa-facebook"></i>
+
+            Facebook
+
+        </a>
+
+
+        <a href="https://wa.me/573150524957"
+           target="_blank"
+           class="whatsapp">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    Ángel Santiago Estupiñan Gómez · 2026
+
+</footer>
+
+
+</main>
 
 </body>
 </html>
-
+```
